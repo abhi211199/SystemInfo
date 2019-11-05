@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css">
+    <meta charset="UTF-8">
+    <title>System Info!</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  </head>
+  <body>
+    <h1 id="head">System-Info</h1>
+    <p>This is a cross-platform desktop app built on Electron and NodeJs.<br>
+    This app displays the system information like OS config, CPU config etc.</p>
+    <script>var os=require('os')</script>
+    <l1>OS-Architecture:<script>document.write(os.arch())</script></l1><br>
+    <l1>No. of CPU cores:<script>document.write(os.cpus().length)</script></l1><br>
+    <l1>Home Directory:<script>document.write(os.homedir())</script></l1><br>
+    <l1>Hostname:<script>document.write(os.hostname())</script></l1><br>
+    <l1>Network Interfaces:<script>document.write(Object.keys(os.networkInterfaces()).length);console.log(os.networkInterfaces());</script></l1><br> 
+  </body>
+</html>
